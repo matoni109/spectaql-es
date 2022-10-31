@@ -1,0 +1,67 @@
+
+spectaql:
+  logoFile: public/images/submarine-dark-clear.png
+  faviconFile: public/images/favicon.ico
+  themeDir: public/themes/my-partial-theme
+
+introspection:
+  schemaFile: ./data/schema.gql
+  fieldExpansionDepth: 2
+  queriesDocumentedDefault: true
+  queryDocumentedDefault: true
+  queryArgDocumentedDefault: true
+  hideQueriesWithUndocumentedReturnType: true
+  mutationsDocumentedDefault: true
+  mutationDocumentedDefault: true
+  mutationArgDocumentedDefault: true
+  hideMutationsWithUndocumentedReturnType: true
+  objectsDocumentedDefault: true
+  objectDocumentedDefault: true
+  fieldDocumentedDefault: true
+  argDocumentedDefault: true
+  hideFieldsOfUndocumentedType: true
+  queryNameStrategy: capitalizeFirst
+  headers:
+    Authorization: 'apikey REPLACE_WITH_YOUR_API_KEY'
+
+  spectaqlDirective:
+    enable: true
+
+extensions:
+  graphqlScalarExamples: true
+
+info:
+  x-hideIntroduction: false
+  x-hideWelcome: false
+  x-hideIntroItems: false
+  x-hideIsDeprecated: false
+  x-hideDeprecationReason: false
+  logoFile: public/images/submarine-dark-clear.png
+  faviconFile: public/images/favicon.ico
+  title: GraphQL API Reference
+  description: Welcome to the the submarine platform public api documentation page.
+  version: 1.0.0
+  termsOfService: https://www.example.com/terms
+  contact:
+    name: API Support
+    url: https://hub.getsubmarine.com/
+    email: hello@discolabs.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  x-introItems:
+    - title: Important thingyt-
+      description: Some important stuff we wanted you to know. Supports `markdown`
+  x-hidePoweredBy: true
+  x-url: https://api.getsubmarine.com/graphql
+
+servers:
+  - url: https://staging.example.com/graphql
+    description: Staging
+  - url: https://example.com/graphql
+    description: Production
+    production: true
+    headers:
+      - name: Authorization
+        example: Bearer <YOUR_TOKEN_HERE>
+        comment: Your foo from bar

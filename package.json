@@ -1,0 +1,32 @@
+{
+  "name": "spectaql-modules",
+  "version": "1.0.0",
+  "description": "spectaql-es",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": {
+    "node": "18.4.0",
+    "yarn": "^1.22.19"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/ -c .eslintrc --ext js",
+    "start": "node src/server.js",
+    "dev-start": "nodemon src/server.js",
+    "schema:doc": "rm -rf ./build/graphqldoc && yarn spectaql spectaql-config.yml -t ./build/graphqldoc",
+    "schema:dev": "rm -rf ./build/graphqldoc && yarn spectaql -D spectaql-config.yml -t ./build/graphqldoc"
+  },
+  "author": "matoni109",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "lodash": "^4.17.21",
+    "microfiber": "^1.3.1",
+    "spectaql": "^1.5.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.0"
+  }
+}
